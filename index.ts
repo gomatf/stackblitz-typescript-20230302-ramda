@@ -5,7 +5,7 @@ import './style.css';
 const appDiv: HTMLElement = document.getElementById('app');
 appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
 
-// Ramda を試す
+// Ramda をインポート
 import * as R from 'ramda';
 console.log('Test message');
 
