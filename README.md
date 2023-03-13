@@ -5,3 +5,10 @@
 ## 参考
 
 - [Ramda Documentation](https://ramdajs.com/)
+
+## インストール
+
+```
+$ npm install ramda
+$ npm install -D @types/ramda
+```
