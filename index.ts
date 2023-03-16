@@ -4,11 +4,11 @@ import './style.css';
 // Write TypeScript code!
 const appDiv: HTMLElement | null = document.getElementById('app');
 if (appDiv) {
-  appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
+  appDiv.innerHTML = `<h1>Ramda samples (output console)</h1>`;
 }
 
 // ================
-// Preparation
+// 準備
 
 // データ型の定義
 type Menu = {
@@ -21,6 +21,8 @@ import * as R from 'ramda';
 
 // ================
 // Object
+
+console.log("Object -------------------------");
 
 // オブジェクトのディープコピー
 const menu: Menu = {
@@ -39,7 +41,21 @@ for (const [key, value] of R.toPairs(menu)) {
 }
 
 // ================
+// List
+
+console.log("List -------------------------");
+
+// フラット化
+const ls = [1, 2, [3, 4], [5]]
+console.log(R.flatten(ls));
+
+// 範囲の配列
+console.log(R.range(7,11));
+
+// ================
 // Relation
+
+console.log("Relation -------------------------");
 
 // 等価判定（プリミティブでもオブジェクトでも可）
 console.log(R.equals(menu, { name: 'オムライス', price: 780 })); // true
@@ -68,6 +84,8 @@ console.log(R.difference(arr1, arr3));
 
 // ================
 // Logic
+
+console.log("Logic -------------------------");
 
 // デフォルト値
 const defaultToMenu = R.defaultTo<Menu>(menu);
