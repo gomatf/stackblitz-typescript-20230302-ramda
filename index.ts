@@ -82,13 +82,17 @@ console.log(R.uniqWith(eqByMenuName)(arr2));
 const arr3 = [4, 7, 9, 1];
 console.log(R.difference(arr1, arr3));
 
+const ls1 = ['Abc','Def','Ghi','Jkl'];
+const ls2 = ['ghi','def'];
+console.log(R.differenceWith(R.eqBy(R.toLower),ls1,ls2));
+
 // ================
 // Logic
 
 console.log("Logic -------------------------");
 
 // デフォルト値
-const defaultToMenu = R.defaultTo<Menu>(menu);
+const defaultToMenu = R.defaultTo(menu);
 console.log(defaultToMenu(null));
 console.log(defaultToMenu(undefined));
 console.log(defaultToMenu(13));
