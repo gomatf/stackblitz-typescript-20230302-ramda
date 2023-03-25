@@ -52,6 +52,11 @@ console.log(R.flatten(ls));
 // 範囲の配列
 console.log(R.range(7,11));
 
+// 部分一致（文字列でも使用可能）
+const s1 = 'exampleMessage';
+console.log(R.startsWith('ex', s1));
+console.log(R.endsWith('ge', s1));
+
 // ================
 // Relation
 
@@ -85,6 +90,9 @@ console.log(R.difference(arr1, arr3));
 const ls1 = ['Abc','Def','Ghi','Jkl'];
 const ls2 = ['ghi','def'];
 console.log(R.differenceWith(R.eqBy(R.toLower),ls1,ls2));
+
+// 交差集合（重複も取り除かれる）
+console.log(R.intersection(arr1, arr3));
 
 // ================
 // Logic
